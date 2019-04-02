@@ -10,11 +10,11 @@ bool check(int a, int b);
 
 
 vector<vector<char>> map{{'.','#','#','#','#','#'},
-							           {'.','.','.','.','.','#'},
-							           {'#','.','#','#','#','#'},
-							           {'#','.','#','#','#','#'},
-							           {'.','.','.','#','.','G'},
-							           {'#','#','.','.','.','#'}};
+			 {'.','.','.','.','.','#'},
+			 {'#','.','#','#','#','#'},
+			 {'#','.','#','#','#','#'},
+			 {'.','.','.','#','.','G'},
+			 {'#','#','.','.','.','#'}};
 
 int main()
 {
@@ -71,17 +71,17 @@ int main()
 bool PATH(int x, int y)
 {
 	if(check(x,y) == false)
-  {
+  	{
 		return false;
 	}
 
 	if(map[x][y] == 'G')
-  {
+  	{
 		return true;
 	}
 
 	if(map[x][y] == '#' || map[x][y]=='X' || map[x][y]=='x' || map[x][y] == '+')
-  {
+  	{
 		return false;
 	}
 
@@ -89,25 +89,25 @@ bool PATH(int x, int y)
 
 	//Check movement North
 	if (PATH(x,y-1) == true)
-  {
+  	{
 		return true;
 	}
 
 	//Check movement East
 	if (PATH(x+1,y) == true)
-  {
+  	{
 		return true;
 	}
 
 	//Check movement South
 	if (PATH(x,y+1) == true)
-  {
+  	{
 		return true;
 	}
 
 	//Check movement West
 	if (PATH(x-1,y) == true)
-  {
+  	{
 		return true;
 	}
 
