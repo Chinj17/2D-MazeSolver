@@ -9,6 +9,7 @@ void Clear_Screen();
 bool check(int a, int b);
 
 
+// Defining the map
 vector<vector<char>> map{{'.','#','#','#','#','#'},
 			 {'.','.','.','.','.','#'},
 			 {'#','.','#','#','#','#'},
@@ -136,7 +137,7 @@ void Clear_Screen()
 	cout << "\x1b[2J\x1b[1;1H" << flush;
 }
 
-// Function to check if the Path goes out of bounds 
+// Function to check if the Path goes out of bounds
 bool check(int a, int b)
 {
 	if ( a > 5 || b > 5 || a < 0 || b < 0 || map[a][b] == '#' )
